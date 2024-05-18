@@ -48,10 +48,12 @@ namespace PasswordManager.Forms
             {
                 string decryptedPassword = DecryptStringAES(txtPassword.Text);
                 txtPassword.Text = decryptedPassword;
+                btnCopyToClipboard.Visible = true;
             }
             else
             {
                 txtPassword.Text = passwordCopy;
+                btnCopyToClipboard.Visible = false;
             }
         }
 
@@ -88,7 +90,6 @@ namespace PasswordManager.Forms
             }
 
             DecryptPasswordBox.Visible = true;
-            btnCopyToClipboard.Visible = true;
         }
 
         private void btnClear_Click(object sender, EventArgs e)
