@@ -35,7 +35,6 @@
             label2 = new Label();
             btnDelete = new Button();
             btnUpdate = new Button();
-            label3 = new Label();
             txtSearchInput = new TextBox();
             nameLabel = new Label();
             txtName = new TextBox();
@@ -49,6 +48,7 @@
             txtComment = new RichTextBox();
             btnClear = new Button();
             btnGenerate = new Button();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -57,10 +57,10 @@
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(335, 53);
+            dataGridView1.Location = new Point(335, 52);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
-            dataGridView1.Size = new Size(430, 372);
+            dataGridView1.Size = new Size(430, 373);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -82,7 +82,7 @@
             // 
             btnAdd.BackColor = Color.FromArgb(0, 192, 0);
             btnAdd.FlatStyle = FlatStyle.Flat;
-            btnAdd.Location = new Point(70, 339);
+            btnAdd.Location = new Point(74, 339);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(75, 23);
             btnAdd.TabIndex = 3;
@@ -93,7 +93,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(335, 35);
+            label2.Location = new Point(335, 34);
             label2.Name = "label2";
             label2.Size = new Size(65, 15);
             label2.TabIndex = 4;
@@ -104,7 +104,7 @@
             btnDelete.BackColor = Color.Red;
             btnDelete.FlatStyle = FlatStyle.Flat;
             btnDelete.ForeColor = SystemColors.ActiveCaptionText;
-            btnDelete.Location = new Point(70, 368);
+            btnDelete.Location = new Point(74, 368);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(75, 23);
             btnDelete.TabIndex = 5;
@@ -114,33 +114,24 @@
             // 
             // btnUpdate
             // 
-            btnUpdate.Location = new Point(151, 339);
+            btnUpdate.Location = new Point(155, 339);
             btnUpdate.Name = "btnUpdate";
             btnUpdate.Size = new Size(75, 23);
             btnUpdate.TabIndex = 6;
             btnUpdate.Text = "Update";
             btnUpdate.UseVisualStyleBackColor = true;
             // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(563, 27);
-            label3.Name = "label3";
-            label3.Size = new Size(45, 15);
-            label3.TabIndex = 7;
-            label3.Text = "Search:";
-            // 
             // txtSearchInput
             // 
-            txtSearchInput.Location = new Point(614, 24);
+            txtSearchInput.Location = new Point(582, 23);
             txtSearchInput.Name = "txtSearchInput";
-            txtSearchInput.Size = new Size(151, 23);
+            txtSearchInput.Size = new Size(124, 23);
             txtSearchInput.TabIndex = 8;
             // 
             // nameLabel
             // 
             nameLabel.AutoSize = true;
-            nameLabel.Location = new Point(75, 47);
+            nameLabel.Location = new Point(79, 47);
             nameLabel.Name = "nameLabel";
             nameLabel.Size = new Size(42, 15);
             nameLabel.TabIndex = 11;
@@ -148,14 +139,14 @@
             // 
             // txtName
             // 
-            txtName.Location = new Point(75, 65);
+            txtName.Location = new Point(79, 65);
             txtName.Name = "txtName";
             txtName.Size = new Size(151, 23);
             txtName.TabIndex = 12;
             // 
             // txtPassword
             // 
-            txtPassword.Location = new Point(75, 123);
+            txtPassword.Location = new Point(79, 123);
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new Size(151, 23);
             txtPassword.TabIndex = 14;
@@ -163,7 +154,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(75, 105);
+            label4.Location = new Point(79, 105);
             label4.Name = "label4";
             label4.Size = new Size(60, 15);
             label4.TabIndex = 13;
@@ -171,7 +162,7 @@
             // 
             // txtURL
             // 
-            txtURL.Location = new Point(75, 180);
+            txtURL.Location = new Point(79, 180);
             txtURL.Name = "txtURL";
             txtURL.Size = new Size(151, 23);
             txtURL.TabIndex = 16;
@@ -179,7 +170,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(75, 162);
+            label5.Location = new Point(79, 162);
             label5.Name = "label5";
             label5.Size = new Size(31, 15);
             label5.TabIndex = 15;
@@ -188,7 +179,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(75, 219);
+            label6.Location = new Point(79, 219);
             label6.Name = "label6";
             label6.Size = new Size(64, 15);
             label6.TabIndex = 17;
@@ -197,7 +188,7 @@
             // DecryptPasswordBox
             // 
             DecryptPasswordBox.AutoSize = true;
-            DecryptPasswordBox.Location = new Point(232, 126);
+            DecryptPasswordBox.Location = new Point(236, 126);
             DecryptPasswordBox.Name = "DecryptPasswordBox";
             DecryptPasswordBox.Size = new Size(67, 19);
             DecryptPasswordBox.TabIndex = 19;
@@ -208,7 +199,7 @@
             // 
             // btnCopyToClipboard
             // 
-            btnCopyToClipboard.Location = new Point(23, 123);
+            btnCopyToClipboard.Location = new Point(27, 123);
             btnCopyToClipboard.Name = "btnCopyToClipboard";
             btnCopyToClipboard.Size = new Size(46, 23);
             btnCopyToClipboard.TabIndex = 20;
@@ -220,7 +211,7 @@
             // txtComment
             // 
             txtComment.BorderStyle = BorderStyle.FixedSingle;
-            txtComment.Location = new Point(75, 237);
+            txtComment.Location = new Point(79, 237);
             txtComment.Name = "txtComment";
             txtComment.Size = new Size(151, 69);
             txtComment.TabIndex = 21;
@@ -228,7 +219,7 @@
             // 
             // btnClear
             // 
-            btnClear.Location = new Point(151, 368);
+            btnClear.Location = new Point(155, 368);
             btnClear.Name = "btnClear";
             btnClear.Size = new Size(75, 23);
             btnClear.TabIndex = 22;
@@ -238,7 +229,7 @@
             // 
             // btnGenerate
             // 
-            btnGenerate.Location = new Point(70, 402);
+            btnGenerate.Location = new Point(74, 402);
             btnGenerate.Name = "btnGenerate";
             btnGenerate.Size = new Size(156, 23);
             btnGenerate.TabIndex = 23;
@@ -246,11 +237,22 @@
             btnGenerate.UseVisualStyleBackColor = true;
             btnGenerate.Click += btnGenerate_Click;
             // 
+            // button1
+            // 
+            button1.Location = new Point(712, 23);
+            button1.Name = "button1";
+            button1.Size = new Size(53, 23);
+            button1.TabIndex = 24;
+            button1.Text = "Search";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button1);
             Controls.Add(btnGenerate);
             Controls.Add(btnClear);
             Controls.Add(txtComment);
@@ -264,7 +266,6 @@
             Controls.Add(txtName);
             Controls.Add(nameLabel);
             Controls.Add(txtSearchInput);
-            Controls.Add(label3);
             Controls.Add(btnUpdate);
             Controls.Add(btnDelete);
             Controls.Add(label2);
@@ -290,7 +291,6 @@
         private Label label2;
         private Button btnDelete;
         private Button btnUpdate;
-        private Label label3;
         private TextBox txtSearchInput;
         private Label nameLabel;
         private TextBox txtName;
@@ -304,5 +304,6 @@
         private RichTextBox txtComment;
         private Button btnClear;
         private Button btnGenerate;
+        private Button button1;
     }
 }

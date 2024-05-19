@@ -32,10 +32,26 @@ namespace PasswordManager.Forms
             if (File.Exists(filePath))
             {
                 var lines = File.ReadAllLines(filePath);
-                var data = lines.Select(line => line.Split(',')).Select(parts => new { Name = parts[0], Password = parts[1], URL = parts[2], Comment = parts[3] });
-                dataGridView1.DataSource = data.ToList();
+                var dataTable = new DataTable();
+
+                dataTable.Columns.Add("Name");
+                dataTable.Columns.Add("Password");
+                dataTable.Columns.Add("URL");
+                dataTable.Columns.Add("Comment");
+
+                foreach (var line in lines)
+                {
+                    var parts = line.Split(',');
+                    if (parts.Length == 4)
+                    {
+                        dataTable.Rows.Add(parts[0], parts[1], parts[2], parts[3]);
+                    }
+                }
+
+                dataGridView1.DataSource = dataTable;
             }
         }
+
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -211,9 +227,7 @@ namespace PasswordManager.Forms
 
         private void btnGenerate_Click(object sender, EventArgs e)
         {
-            string generatedPassword = GenerateRandomPassword(12);
-
-            txtPassword.Text = generatedPassword;
+            txtPassword.Text = GenerateRandomPassword(12);
         }
 
         private string GenerateRandomPassword(int length)
@@ -229,6 +243,12 @@ namespace PasswordManager.Forms
             }
 
             return sb.ToString();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string searchValue = txtSearchInput.Text;
+            (dataGridView1.DataSource as DataTable).DefaultView.RowFilter = string.Format("Name LIKE '%{0}%'", searchValue);
         }
     }
 }
